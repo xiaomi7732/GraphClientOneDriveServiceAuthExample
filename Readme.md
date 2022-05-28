@@ -46,6 +46,12 @@ https://login.microsoftonline.com/{tenantId}/adminconsent?client_id={clientId}&s
 * state could be anything. It will be post back to you when the consent is done.
 * The `redirect_uri` need to match one of the Web endpoint you created earlier.
 
+If you happen to be the tenant admin, you can consent it in the browser to allow the application to use the graph api. If you aren't, you send the URL to the admin, asking them to consent it. The consent dialog looks like this:
+
+![Screenshot for the consent dialog](./images/AdminConsent.png)
+
+Once the consent is there, process forward for authenticating with the code.
+
 ## Write the code
 
 Code is relative simple:
